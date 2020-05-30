@@ -25,7 +25,7 @@ LINKS = (('Github', 'http://www.github.com/yassinebelmamoun'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('Github', 'http://www.github.com/yassinebelmamoun'),,
+SOCIAL = (('Github', 'http://www.github.com/yassinebelmamoun'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
