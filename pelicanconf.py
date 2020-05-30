@@ -85,5 +85,6 @@ USE_FOLDER_AS_CATEGORY = True
 STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {
     "extra/custom.css": {"path": "static/custom.css"},
+    'extra/CNAME': {'path': 'CNAME'}
 }
 CUSTOM_CSS = 'static/custom.css'
