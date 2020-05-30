@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 from datetime import datetime
 
 AUTHOR = 'Yassine Belmamoun'
-SITENAME = 'Yassine Belmamoun - Personal website'
-SITEURL = '.'
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
+OUTPUT_PATH = 'output/'
 
 TIMEZONE = 'Asia/Bangkok'
 
@@ -25,6 +25,8 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('github', 'http://www.github.com/yassinebelmamoun'),
+          ('facebook', 'https://www.facebook.com/yassine.belmamoun'),
+          ('envelope', 'mailto:belmamoun.yassine@gmail.com'),
           ('rss', '/blog/feeds/all.atom.xml'),
           )
 
@@ -42,10 +44,11 @@ DEFAULT_PAGINATION = 10
 # Default Theme
 THEME = 'themes/flex'
 
+SITENAME = "Yassine Belmamoun - Personal Website"
 SITETITLE = "Yassine Belmamoun"
 SITESUBTITLE = "Tech entrepreneur & Software engineer"
 SITELOGO = SITEURL + "/images/profile_picture_001.jpeg"
-FAVICON = SITEURL + "/images/favicon.ico"
+FAVICON = SITEURL + "/images/favicon/favicon.ico"
 
 SITEDESCRIPTION = "Yassine Belmamoun - Software Engineer & Tech Entrepreneur"
 BROWSER_COLOR = "#4285f4"
@@ -62,10 +65,7 @@ COPYRIGHT_YEAR = 2020
 DATE_FORMATS = {
     'en': '%B %d, %Y',
 }
-STATIC_PATHS = ['images', 'extra/ads.txt']
-EXTRA_PATH_METADATA = {
-    "extra/custom.css": {"path": "static/custom.css"},
-}
+
 
 MAIN_MENU = True
 MENUITEMS = (('Archives', '/archives.html'),
@@ -79,3 +79,11 @@ FEED_ALL_ATOM = 'feeds/all.atom.xml'
 PYGMENTS_STYLE = 'manni'
 
 LINKS_IN_NEW_TAB = 'external'
+USE_FOLDER_AS_CATEGORY = True
+
+# USE_LESS = True
+STATIC_PATHS = ['images', 'extra']
+EXTRA_PATH_METADATA = {
+    "extra/custom.css": {"path": "static/custom.css"},
+}
+CUSTOM_CSS = 'static/custom.css'
