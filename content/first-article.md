@@ -1,15 +1,8 @@
-Title: My First Article
+Title: Hello World! This is the first article!
 Date: 2020-05-30 09:50
-Category: Test
 
-This article is the first article. This is a test.
+Hello World!
 
-    :::python
-    print("There will be not line number here")
+I finally decided to make a blog to share thoughts and notes. Anyway, here's the first post out of many to come.
 
-yes
-
-    #!python
-    print("You can see the line number, right?")
-
-This is really great.
+I will add a newsletter later.
