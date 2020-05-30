@@ -1,5 +1,5 @@
-name: about
-title: About
+Title: About
+slug: about
 
 
 Welcome,
