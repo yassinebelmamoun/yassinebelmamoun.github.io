@@ -50,27 +50,17 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="#4285f4">
 
-<meta name="author" content="Yassine Belmamoun" />
-<meta name="description" content="Flex theme 2.1.0 comes with features that I was delaying for so long. Flex 2.1.0 adds support for Google AdSense. If you choose wisely, ads are a way to win some money, but if not, you may loose your users due to excessive use of ads …" />
-<meta name="keywords" content="pelican, python, theme">
-
-
+    <meta name="author" content="Yassine Belmamoun" />
+    <meta name="description" content="Yassine Belmamoun - Software Engineer & Tech Entrepreneur" />
 <meta property="og:site_name" content="Yassine Belmamoun - Personal Website"/>
-<meta property="og:title" content="Flex 2.1.0"/>
-<meta property="og:description" content="Flex theme 2.1.0 comes with features that I was delaying for so long. Flex 2.1.0 adds support for Google AdSense. If you choose wisely, ads are a way to win some money, but if not, you may loose your users due to excessive use of ads …"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Yassine Belmamoun - Personal Website"/>
+<meta property="og:description" content="Yassine Belmamoun - Software Engineer & Tech Entrepreneur"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://yassinebelmamoun.com/flex-pelican-theme-update-2-1.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2016-11-16 08:00:00+07:00"/>
-<meta property="article:modified_time" content="2016-11-16 08:00:00+07:00"/>
-<meta property="article:author" content="http://yassinebelmamoun.com/author/yassine-belmamoun.html">
-<meta property="article:section" content="News"/>
-<meta property="article:tag" content="pelican"/>
-<meta property="article:tag" content="python"/>
-<meta property="article:tag" content="theme"/>
-<meta property="og:image" content="http://yassinebelmamoun.com/images/flex-screenshot.png">
+<meta property="og:url" content="http://yassinebelmamoun.com"/>
+<meta property="og:image" content="http://localhost:8000/images/profile_picture_001.jpeg">
 
-  <title>Yassine Belmamoun - Personal Website &ndash; Flex 2.1.0</title>
+  <title>Yassine Belmamoun - Personal Website &ndash; Category misc</title>
 
 </head>
 <body class="light-theme">
@@ -86,6 +76,25 @@
 
 <p>Tech entrepreneur & Software engineer</p>
 
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="http://yassinebelmamoun.com/pages/about.html#about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="http://yassinebelmamoun.com/pages/contact.html#contact">
+                  Contact
+                </a>
+              </li>
+
+        </ul>
+      </nav>
 
       <ul class="social">
           <li>
@@ -125,54 +134,28 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-      
-    <h1 id="flex-pelican-theme-update-2-1">Flex 2.1.0</h1>
+    <h2><a href="http://yassinebelmamoun.com/hello-world-this-is-the-first-article.html#hello-world-this-is-the-first-article">Hello World! This is the first article!</a></h2>
     <p>
-      Posted on November 16, 2016 in <a href="http://yassinebelmamoun.com/category/news.html">News</a>
+      Posted on May 30, 2020 in <a href="http://yassinebelmamoun.com/category/misc.html">misc</a>
+
 
     </p>
   </header>
-
-
   <div>
-    <p><a href="https://github.com/alexandrevicenzi/Flex">Flex theme</a> 2.1.0 comes with features that I was delaying for so long.</p>
-<p>Flex 2.1.0 adds support for Google AdSense.</p>
-<p>If you choose wisely, ads are a way to win some money, but if not, you may loose your users due to excessive use of ads.</p>
-<p>Flex has six places for ads. Google recommends up to 3 ads per page. There is ads page only, and banner that appears on all pages.
-Below you can see how to enable ads in your pelican configuration file.</p>
-<div class="highlight"><pre><span></span><code><span class="n">GOOGLE_ADSENSE</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;ca_id&#39;</span><span class="p">:</span> <span class="s1">&#39;ca-pub-1234567890&#39;</span><span class="p">,</span>    <span class="c1"># Your AdSense ID</span>
-    <span class="s1">&#39;page_level_ads&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>          <span class="c1"># Allow Page Level Ads (mobile)</span>
-    <span class="s1">&#39;ads&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;aside&#39;</span><span class="p">:</span> <span class="s1">&#39;1234561&#39;</span><span class="p">,</span>          <span class="c1"># Side bar banner (all pages)</span>
-        <span class="s1">&#39;main_menu&#39;</span><span class="p">:</span> <span class="s1">&#39;1234562&#39;</span><span class="p">,</span>      <span class="c1"># Banner before main menu (all pages)</span>
-        <span class="s1">&#39;index_top&#39;</span><span class="p">:</span> <span class="s1">&#39;1234563&#39;</span><span class="p">,</span>      <span class="c1"># Banner after main menu (index only)</span>
-        <span class="s1">&#39;index_bottom&#39;</span><span class="p">:</span> <span class="s1">&#39;1234564&#39;</span><span class="p">,</span>   <span class="c1"># Banner before footer (index only)</span>
-        <span class="s1">&#39;article_top&#39;</span><span class="p">:</span> <span class="s1">&#39;1234565&#39;</span><span class="p">,</span>    <span class="c1"># Banner after article title (article only)</span>
-        <span class="s1">&#39;article_bottom&#39;</span><span class="p">:</span> <span class="s1">&#39;1234566&#39;</span><span class="p">,</span> <span class="c1"># Banner after article content (article only)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-
-<p>Version 2.1.0 also comes with new translations. You can see available translations <a href="https://github.com/alexandrevicenzi/Flex/wiki/Translations">here</a>.</p>
-<p>Hope you enjoy this version.</p>
+      <p>Hello World!</p>
+<p>I finally decided to make a blog to share thoughts and notes. Anyway, here's the first post out of many to come.</p>
+<p>I will add a newsletter later.</p>
   </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="http://yassinebelmamoun.com/tag/pelican.html">pelican</a>
-      <a href="http://yassinebelmamoun.com/tag/python.html">python</a>
-      <a href="http://yassinebelmamoun.com/tag/theme.html">theme</a>
-    </p>
-  </div>
-
-
-
-
-
 </article>
+
+  <div class="pagination">
+  </div>
+
+
 
     <footer>
 <p>
