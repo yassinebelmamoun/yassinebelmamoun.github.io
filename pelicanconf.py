@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Yassine Belmamoun'
 SITENAME = 'Yassine Belmamoun - Personal website'
-SITEURL = ''
+SITEURL = 'www.yassinebelmamoun.com'
 
 PATH = 'content'
 
@@ -20,13 +20,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
+LINKS = (('Github', 'http://www.github.com/yassinebelmamoun'),
+
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
+SOCIAL = (('Github', 'http://www.github.com/yassinebelmamoun'),,
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
