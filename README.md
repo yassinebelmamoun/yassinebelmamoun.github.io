@@ -4,8 +4,8 @@
 - pages: Github pages
 
 ## Command to publish in Github Pages
-'''shell
+```shell
 $ make publish
 $ ghp-import output -b gh-pages
 $ git push pages gh-pages:master
-'''
+```
