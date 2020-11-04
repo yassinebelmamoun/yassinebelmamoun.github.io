@@ -7,23 +7,25 @@ Status: draft
 
 Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasize short-term gains over long-term maintainability.
 
-We measure technical debt as **the cost of additional work** required to move from a relatively poorly designed solution to an optimal solution.
+We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to an optimal solution.
 
 ## Analogy with financial debt
 
 If technical debt is not repaid, it can accumulate 'interest', making it harder to implement changes. Unaddressed technical debt increases software entropy.
 
-"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite... The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as [interest](https://en.wikipedia.org/wiki/Interest) on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) or otherwise."[[11]](https://en.wikipedia.org/wiki/Technical_debt#cite_note-oopsla92-11)
+Ward Cunningham summarized it in an elegant manner:
 
+> "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite... The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as [interest](https://en.wikipedia.org/wiki/Interest) on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) or otherwise."
 — [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunningham), 1992
 
-## The rational behind the technical debt: When the technical debt is acceptable and preferable
+## Acceptance of the technical debt
 
-> Technical debt is bad, but (more often than not) optimal. - Paul Graham
+> "Technical debt is bad, but (more often than not) optimal."
+[Paul Graham](http://www.paulgraham.com)
 
 Technical debt is not necessarily a bad thing, and sometimes it is required to move projects forward.
 
-Especially for young start-ups,  accruing technical debt makes perfect sense. The rational behind is: pay for today’s progress with tomorrow’s efforts, until it’s clear whether the company will survive in the market. It’s simple economics. Since most startups fail, there’s something like a 80% chance the company will simply fail and the debt will never need to be paid.
+Especially for young start-ups,  accruing technical debt makes perfect sense. The rational behind is: pay for today’s progress with tomorrow’s efforts, until it’s clear whether the company will survive in the market. It’s simple economics. Since most startups fail, high chances are the company will simply fail and the debt will never need to be paid.
 
 This is what we would call a deliberate debt in opposition to another form: non-deliberate technical debt. Deliberate debt happens when Technology and Business teams are aligned. The goal of the organization is to:
 
@@ -36,9 +38,9 @@ While keepin in mind that the engineering team is accumulating technical debt th
 
 Once a company has achieved “product-market fit” and is off to the races, it’s no longer a great idea to just stack debt on top of debt.
 
-The real problem with accumulating technical debt is that the business will never want to pay it off. Stakeholders and the rest of the company might have trouble relating to the abstract nature of resolving technical debt. Some of the senior management might hear: “engineering is requesting permission to move at half pace for the next 3 months.” when engineering is talking about technical debt. Paying off the technical debt ends up being a very difficult thing to rally stakeholder support for.
+The real problem with accumulating technical debt is that the business will never want to pay it off. Stakeholders and the rest of the company might have trouble relating to the abstract nature of resolving technical debt. Senior management might hear: “engineering is requesting permission to move at half pace for the next 3 months.” when engineering is talking about technical debt. Paying off the technical debt ends up being a very difficult thing to rally stakeholder support for.
 
-There is usually no trigger to address the technical debt issue: The impact on the velocity is cumulative and slow that we do not experience it suddenly. We learn to live with it.
+There is usually no trigger to address the technical debt issue: The impact on the velocity is slow and cumulative that we do not experience it suddenly. We learn to live with it.
 
 We tend to accept as a matter of fact the consequences of the technical debt:
 
@@ -46,20 +48,21 @@ We tend to accept as a matter of fact the consequences of the technical debt:
 - Slow down of progress: It is more and more difficult to build new features and functionalities.
 - Impact on the performance and stability: Software become a house of cards, the smallest change might have terrible consequences.
 
-## Can the technical debt kill the business
+## The Death by Tech Debt
 
-Death-by-tech-debt is a slow kind of death. Let's explore some consequences of the tech debt.
+Death-by-tech-debt is a slow kind of death. Let's explore some consequences of the tech debt to understand better how it can kill a business.
 
-There are cash costs issues such as:
+We can distinguish cash costs vs non-cash cost issues.
 
+Some examples of cash cost consequences of technical are:
 - Need to recruit more people to maintain the system
 - Extra time required to build new features
 - Fines due to security breaches (e.g. SLA)
 - Lost sales following the system outages (e.g. churn)
 
-The non-cash costs of the tech debt can be pretty harmful to a business too. For instance, the tech debt can make the engineer team incapable to adapt to the changes in the market.
+The non-cash costs of the tech debt can also be pretty harmful to a business: For instance, the tech debt can make the engineer team incapable to adapt to the changes in the market.
 
-## Watch out for the alarming signs of the technical Bankruptcy
+## Signs of Technical Bankruptcy
 
 If you have any of the following signs, it is undoubtly time to take actions:
 
