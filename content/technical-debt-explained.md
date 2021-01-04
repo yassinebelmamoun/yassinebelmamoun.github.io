@@ -1,19 +1,20 @@
 Title: Technical Debt Explained
-Date: 2020-11-04 09:00
-Status: draft
+Date: 2021-01-04 21:50
+Category: Software Development
+Slug: technical-debt-explained
 
 
-## What is a technical debt
+## What is technical debt in software development
 
-Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasize short-term gains over long-term maintainability.
+Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasizes short-term gains over long-term maintainability.
 
 We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to an optimal solution.
 
-## Analogy with financial debt
+## The analogy of financial debt
 
-If technical debt is not repaid, it can accumulate 'interest', making it harder to implement changes. Unaddressed technical debt increases software entropy.
+If technical debt is not repaid, it can accumulate 'interest', making it harder to implement changes.
 
-Ward Cunningham summarized it in an elegant manner:
+And unaddressed technical debt increases software entropy. Ward Cunningham summarized it in an elegant manner:
 
 > "Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite... The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as [interest](https://en.wikipedia.org/wiki/Interest) on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) or otherwise."
 — [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunningham), 1992
@@ -29,8 +30,8 @@ Especially for young start-ups,  accruing technical debt makes perfect sense. Th
 
 This is what we would call a deliberate debt in opposition to another form: non-deliberate technical debt. Deliberate debt happens when Technology and Business teams are aligned. The goal of the organization is to:
 
-- Deliver progress faster.
-- Reach the product-market fit faster.
+- Deliver progress faster
+- Reach the product-market fit faster
 
 While keepin in mind that the engineering team is accumulating technical debt that must be paid eventually.
 
@@ -44,9 +45,9 @@ There is usually no trigger to address the technical debt issue: The impact on t
 
 We tend to accept as a matter of fact the consequences of the technical debt:
 
-- Disalignment between Technology and Business team: There is a feeling of constant misunderstanding between the two teams.
-- Slow down of progress: It is more and more difficult to build new features and functionalities.
-- Impact on the performance and stability: Software become a house of cards, the smallest change might have terrible consequences.
+- Disalignment between Technology and Business team: There is a feeling of constant misunderstanding between the two teams
+- Slow down of progress: It is more and more difficult to build new features and functionalities
+- Impact on the performance and stability: Software become a house of cards, the smallest change might have terrible consequences
 
 ## The Death by Tech Debt
 
@@ -66,11 +67,11 @@ The non-cash costs of the tech debt can also be pretty harmful to a business: Fo
 
 If you have any of the following signs, it is undoubtly time to take actions:
 
-- The company sidelines engineering’s concerns as a nice-to-have.
-- The developers complain about the codebase becoming quite literally a “difficult work environment”.
-- New features start shipping very slowly. Or stop altogether.
-- Gradual attrition of all engineers who like building things until only “maintenance-style” engineers remain.
-- Company falls irrecoverably behind the times.
+- The company sidelines engineering’s concerns as a nice-to-have
+- The developers complain about the codebase becoming quite literally a “difficult work environment”
+- New features start shipping very slowly. Or stop altogether
+- Gradual attrition of all engineers who like building things until only “maintenance-style” engineers remain
+- Company falls irrecoverably behind the times
 
 Eventually the codebase goes bankrupt. And the only practical choice will be to rebuild the entire thing from the ground up
 

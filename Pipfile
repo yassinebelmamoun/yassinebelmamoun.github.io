@@ -6,9 +6,10 @@ verify_ssl = true
 [dev-packages]
 flake8 = "*"
 autopep8 = "*"
+ghp-import = "*"
 
 [packages]
-pelican = "*"
+pelican = "==4.2"
 markdown = "*"
 typogrify = "*"
 
