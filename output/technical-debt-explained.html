@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://yassinebelmamoun.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://yassinebelmamoun.com/theme/pygments/manni.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://yassinebelmamoun.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://yassinebelmamoun.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://yassinebelmamoun.com/theme/font-awesome/css/solid.css">
+
+    <link href="https://yassinebelmamoun.com/static/custom.css" rel="stylesheet">
+
+    <link href="https://yassinebelmamoun.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yassine Belmamoun - Personal Website Atom">
+
+
+    <link rel="shortcut icon" href="https://yassinebelmamoun.com/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://yassinebelmamoun.com/images/favicon/favicon.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-138287199-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4285f4">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#4285f4">
+
+<meta name="author" content="Yassine Belmamoun" />
+<meta name="description" content="What is technical debt in software development Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasizes short-term gains over long-term maintainability. We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to …" />
+<meta name="keywords" content="">
+
+
+<meta property="og:site_name" content="Yassine Belmamoun - Personal Website"/>
+<meta property="og:title" content="Technical Debt Explained"/>
+<meta property="og:description" content="What is technical debt in software development Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasizes short-term gains over long-term maintainability. We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://yassinebelmamoun.com/technical-debt-explained.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-01-04 21:50:00+07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://yassinebelmamoun.com/author/yassine-belmamoun.html">
+<meta property="article:section" content="Software Development"/>
+<meta property="og:image" content="https://yassinebelmamoun.com/images/profile_picture_001.jpeg">
+
+  <title>Yassine Belmamoun - Personal Website &ndash; Technical Debt Explained</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://yassinebelmamoun.com">
+        <img src="https://yassinebelmamoun.com/images/profile_picture_001.jpeg" alt="Yassine Belmamoun" title="Yassine Belmamoun">
+      </a>
+
+      <h1>
+        <a href="https://yassinebelmamoun.com">Yassine Belmamoun</a>
+      </h1>
+
+<p>Tech entrepreneur & Software engineer</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://yassinebelmamoun.com/pages/about.html#about">
+                  About
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://yassinebelmamoun.com/pages/contact.html#contact">
+                  Contact
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="http://www.github.com/yassinebelmamoun" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-facebook" href="https://www.facebook.com/yassine.belmamoun" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-envelope" href="mailto:belmamoun.yassine@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-rss" href="/blog/feeds/all.atom.xml" target="_blank">
+              <i class="fas fa-rss"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://yassinebelmamoun.com">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://yassinebelmamoun.com/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="technical-debt-explained">Technical Debt Explained</h1>
+    <p>
+      Posted on January 04, 2021 in <a href="https://yassinebelmamoun.com/category/software-development.html">Software Development</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h2>What is technical debt in software development</h2>
+<p>Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasizes short-term gains over long-term maintainability.</p>
+<p>We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to an optimal solution.</p>
+<h2>The analogy of financial debt</h2>
+<p>If technical debt is not repaid, it can accumulate 'interest', making it harder to implement changes.</p>
+<p>And unaddressed technical debt increases software entropy. Ward Cunningham summarized it in an elegant manner:</p>
+<blockquote>
+<p>"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite... The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as <a href="https://en.wikipedia.org/wiki/Interest">interest</a> on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> or otherwise."
+— <a href="https://en.wikipedia.org/wiki/Ward_Cunningham">Ward Cunningham</a>, 1992</p>
+</blockquote>
+<h2>Acceptance of the technical debt</h2>
+<blockquote>
+<p>"Technical debt is bad, but (more often than not) optimal."
+<a href="http://www.paulgraham.com">Paul Graham</a></p>
+</blockquote>
+<p>Technical debt is not necessarily a bad thing, and sometimes it is required to move projects forward.</p>
+<p>Especially for young start-ups,  accruing technical debt makes perfect sense. The rational behind is: pay for today’s progress with tomorrow’s efforts, until it’s clear whether the company will survive in the market. It’s simple economics. Since most startups fail, high chances are the company will simply fail and the debt will never need to be paid.</p>
+<p>This is what we would call a deliberate debt in opposition to another form: non-deliberate technical debt. Deliberate debt happens when Technology and Business teams are aligned. The goal of the organization is to:</p>
+<ul>
+<li>Deliver progress faster</li>
+<li>Reach the product-market fit faster</li>
+</ul>
+<p>While keepin in mind that the engineering team is accumulating technical debt that must be paid eventually.</p>
+<h2>When the technical debt becomes a problem</h2>
+<p>Once a company has achieved “product-market fit” and is off to the races, it’s no longer a great idea to just stack debt on top of debt.</p>
+<p>The real problem with accumulating technical debt is that the business will never want to pay it off. Stakeholders and the rest of the company might have trouble relating to the abstract nature of resolving technical debt. Senior management might hear: “engineering is requesting permission to move at half pace for the next 3 months.” when engineering is talking about technical debt. Paying off the technical debt ends up being a very difficult thing to rally stakeholder support for.</p>
+<p>There is usually no trigger to address the technical debt issue: The impact on the velocity is slow and cumulative that we do not experience it suddenly. We learn to live with it.</p>
+<p>We tend to accept as a matter of fact the consequences of the technical debt:</p>
+<ul>
+<li>Disalignment between Technology and Business team: There is a feeling of constant misunderstanding between the two teams</li>
+<li>Slow down of progress: It is more and more difficult to build new features and functionalities</li>
+<li>Impact on the performance and stability: Software become a house of cards, the smallest change might have terrible consequences</li>
+</ul>
+<h2>The Death by Tech Debt</h2>
+<p>Death-by-tech-debt is a slow kind of death. Let's explore some consequences of the tech debt to understand better how it can kill a business.</p>
+<p>We can distinguish cash costs vs non-cash cost issues.</p>
+<p>Some examples of cash cost consequences of technical are:
+- Need to recruit more people to maintain the system
+- Extra time required to build new features
+- Fines due to security breaches (e.g. SLA)
+- Lost sales following the system outages (e.g. churn)</p>
+<p>The non-cash costs of the tech debt can also be pretty harmful to a business: For instance, the tech debt can make the engineer team incapable to adapt to the changes in the market.</p>
+<h2>Signs of Technical Bankruptcy</h2>
+<p>If you have any of the following signs, it is undoubtly time to take actions:</p>
+<ul>
+<li>The company sidelines engineering’s concerns as a nice-to-have</li>
+<li>The developers complain about the codebase becoming quite literally a “difficult work environment”</li>
+<li>New features start shipping very slowly. Or stop altogether</li>
+<li>Gradual attrition of all engineers who like building things until only “maintenance-style” engineers remain</li>
+<li>Company falls irrecoverably behind the times</li>
+</ul>
+<p>Eventually the codebase goes bankrupt. And the only practical choice will be to rebuild the entire thing from the ground up</p>
+<h2>Conclusion</h2>
+<p>Non-tech executives must understand that if the engineers have been release great things for the past year or so, chances are they’re selling a bit of the future to do it. This is normal. But be prepared for the bill to come due.</p>
+<p>Incremental payment of technical debt is better, much like slowly paying off a line of credit. It’s something that can be consciously incorporated into engineering operations while also investing in new work.</p>
+<p>But engineering teams need buy-in from management to do this well. When your engineering team talks about technical debt, listen. Listen like you would listen to the finance team talking about financial debt.</p>
+<p>The future of your business could very well depend on it: The cost of never paying down this technical debt is clear; eventually the cost to deliver functionality will become so high and the speed of it so slow that it is easy for a well-designed competitive software product to overtake the badly-designed software in terms of features.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Yassine Belmamoun - Personal Website ",
+  "url" : "https://yassinebelmamoun.com",
+  "image": "https://yassinebelmamoun.com/images/profile_picture_001.jpeg",
+  "description": "Yassine Belmamoun - Software Engineer & Tech Entrepreneur"
+}
+</script>
+
+
+</body>
+</html>
