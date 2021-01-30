@@ -1,9 +1,10 @@
 # Deployment
-2 different remote:
+
+There are 2 different remote:
 - origin: Pelican conf
 - pages: Github pages
 
-## Command to publish in Github Pages
+## Publish to Github Pages
 
 ```shell
 $ make publish
@@ -15,3 +16,12 @@ inline:
 ```shell
 $ make publish && ghp-import output -b gh-pages && git push pages gh-pages:master
 ```
+
+# How to use Pelican
+
+## Commands frequently used
+- Start dev server: `make devserver`
+
+
+The command:
+ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH=gh-pages) $(OUTPUTDIR=output)

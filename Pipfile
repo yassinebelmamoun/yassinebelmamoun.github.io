@@ -12,6 +12,7 @@ ghp-import = "*"
 pelican = "==4.2"
 markdown = "*"
 typogrify = "*"
+update = "*"
 
 [requires]
 python_version = "3.6"

@@ -2,6 +2,7 @@ PY?=python3
 PELICAN?=pelican
 PELICANOPTS=
 GITHUB_PAGES_BRANCH=gh-pages
+GITHUB_REPOSITORY_NAME=pages
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
@@ -149,7 +150,7 @@ publish:
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	git push origin $(GITHUB_PAGES_BRANCH)
+	git push GITHUB_REPOSITORY_NAME $(GITHUB_PAGES_BRANCH)
 
 
 .PHONY: html help clean regenerate serve serve-global devserver publish github
