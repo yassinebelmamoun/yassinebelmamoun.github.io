@@ -52,7 +52,7 @@ PLUGINS = ["post_stats"]
 
 SITENAME = "Yassine Belmamoun - Personal Website"
 SITETITLE = "Yassine Belmamoun"
-SITESUBTITLE = "Tech entrepreneur & Software engineer"
+SITESUBTITLE = "CTO @ Manatal.com <br/>Tech Entrepreneur & Software Engineer"
 SITELOGO = SITEURL + "/images/profile_picture_002.jpg"
 FAVICON = SITEURL + "/images/favicon/favicon.ico"
 
