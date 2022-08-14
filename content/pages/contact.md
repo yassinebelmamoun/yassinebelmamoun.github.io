@@ -1,5 +1,9 @@
 Title: Contact
 slug: contact
 
-Get in touch. Drop me a personal e-mail at `belmamoun.yassine[at]gmail.com` or
-at `yassine.belmamoun[at]manatal.com` if it is related to Manatal.
+If you would like to get in touch with me, you can reach me via e-mail:
+
+- Personal e-mail address: `belmamoun.yassine[at]gmail.com` 
+- Professional e-mail address: `yassine.belmamoun[at]manatal.com`
+
+You can also send me a message on LinkedIn.
