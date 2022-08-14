@@ -7,3 +7,13 @@ If you would like to get in touch with me, you can reach me via e-mail:
 - Professional e-mail address: `yassine.belmamoun[at]manatal.com`
 
 You can also send me a message on LinkedIn.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
