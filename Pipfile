@@ -15,6 +15,7 @@ pelican = "==4.2"
 typogrify = "*"
 update = "*"
 beautifulsoup4 = "*"
+ghp-import = "*"
 
 [requires]
 python_version = "3.6"
