@@ -5,7 +5,7 @@ Slug: introduction-to-saas-101
 
 I wrote this article to introduce friends and colleagues to the subscription business model of Software as a Service (SaaS) companies.
 
-This article contains a brief introduction to SaaS businesses, an overview of the key metrics of the subscription model and an explanation of the unit economics of SaaS.
+This article contains a brief introduction to SaaS businesses, an overview of the key metrics of the subscription model and an explanation of the unit economics.
 
 # What is a SaaS company?
 
@@ -19,10 +19,10 @@ Some examples of SaaS companies are Netflix, Spotify, Hubspot, Jira, Slack, Zoom
 
 You will often hear the distinction between B2B SaaS and B2C SaaS:
 
-- **B2B SaaS:** SaaS companies selling to business (e.g. Hubspot CRM, Manatal Recruitment Software, Atlassian Jira Project Management tools, Github etc.)
+- **B2B SaaS:** SaaS companies selling to businesses (e.g. Hubspot CRM, Manatal Recruitment Software, Atlassian Jira Project Management tools, Github etc.)
 - **B2C SaaS:** SaaS companies selling to consumers (e.g. Spotify, Netflix, etc.)
 
-Some SaaS companies are selling to both consumer and businesses with usually different plans.
+Some SaaS companies are selling to both consumers and businesses with usually different plans.
 
 ### B2B Enterprise SaaS VS B2B PLG SaaS
 
@@ -31,7 +31,7 @@ In the B2B SaaS, you will also often hear the distinction between Enterprise Saa
 - **Enterprise SaaS:** B2B SaaS focusing on enterprise customers, typically large corporate. The cost of these solutions for the customer will be higher (e.g. a client would pay $10K-$1M or more per year). These companies will rely on a sales team to sell the software making sales cycles longer (e.g. 6 months from getting in touch with the client to implementing the solution). Enterprise SaaS also requires often a lengthy implementation.
 - **PLG SaaS**: B2B SaaS focusing on small and medium-sized businesses. These companies rely on their product to sell usually by offering freemium plans or free trials. These companies tend to have smaller sales teams (or no sales teams) and focus their efforts on customer support and customer success.
 
-Several SaaS companies will sell to both large corporates and small businesses. Gitlab sell contracts worth $100K+ to enterprise customers with on-premise hosting and will also offer a free plan to smaller businesses starting from $19 per month.
+Several SaaS companies will sell to both large corporates and small businesses. For instance, Gitlab sells contracts worth $100K+ to enterprise customers with on-premise hosting and will also offer a free or inexpensive plans to smaller businesses starting from $19 per month.
 
 A more nuanced segmentation based on the average revenue per customer (ARPA) per year:
 
@@ -43,7 +43,7 @@ A more nuanced segmentation based on the average revenue per customer (ARPA) per
 
 The chart below (by Christoph Janz from Point Nice Capital) shows how many customers a SaaS Business to reach ~100M ARR.
 
-![Untitled](images/saas-101-arpa-segmentation.png)
+![ARPA segmentation of SaaS](images/saas-101-arpa-segmentation.png)
 
 ## How do SaaS companies price their software?
 
@@ -71,7 +71,7 @@ The customer pays an amount proportional to its usage of the software. A good ex
 
 ### Revenue
 
-SaaS companies charge their customer for the usage of their software on a recurrent basis (e.g. monthly, annually). This allows SaaS companies to have more predictable revenue and less variance month over month.
+SaaS companies charge their customers for the usage of their software on a recurrent basis (e.g. monthly, annually). This allows SaaS companies to have more predictable revenue and less variance month over month.
 
 Imagine the following case: Netflix stops acquiring new clients and stop losing existing clients. The number of customers will be the same and their revenue every month remains constant.
 
@@ -104,9 +104,9 @@ Let’s start with some definitions:
 - ARPC stands for Average Revenue per Customer
 - ACV stands for Average Customer Value.
 
-These 3 metrics can be used interchangeably. I like to use ARPA. The ARPA is defined as the sum of all your customer’s ARR (or MRR) divided by the number of customers. This can be confusing as some will use the MRR and others the ARR.
+These metrics can be used interchangeably. I like to use ARPA. The ARPA is defined as the sum of all your customer’s ARR (or MRR) divided by the number of customers. This can be confusing as some will use the MRR and others the ARR.
 
-These 3 indicators indicate how large the average customer (business or consumer) pays.
+These 4 indicators indicate how large the average customer (business or consumer) pays.
 
 Let’s take a simple example: If you have 100 customers and your total ARR is $60K, ARPA is $600.
 
@@ -175,13 +175,13 @@ Let’s imagine your SaaS business stops acquiring new customers. What would hap
 
 It depends on your Net MRR churn rate and more precisely on the following formula:
 
-`This month MRR = Last month MRR + **expansion MRR - (contraction MRR + churn MRR)**`
+`This month MRR = Last month MRR + expansion MRR - (contraction MRR + churn MRR)`
 
 If your expansion MRR is higher than your contraction and churn, you will keep growing without acquiring any new clients.
 
 This is the reason investors speak about Net MRR churn rate, a normalized version of the formula above:
 
-Net MRR churn rate = **`(contraction MRR + churn MRR) - expansion MRR) / total MRR`**
+`Net MRR churn rate = [(contraction MRR + churn MRR) - expansion MRR] / total MRR`
 
 The best performing SaaS businesses have a negative Net MRR churn rate.
 
