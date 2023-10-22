@@ -1,21 +1,16 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-
-[dev-packages]
-autopep8 = "*"
-flake8 = "*"
-ghp-import = "*"
-black = "*"
+name = "pypi"
 
 [packages]
-markdown = "*"
-pelican = "==4.2"
+pelican = "*"
 typogrify = "*"
-update = "*"
 beautifulsoup4 = "*"
+markdown = "*"
 ghp-import = "*"
 
+[dev-packages]
+
 [requires]
-python_version = "3.6"
+python_version = "3.11"
