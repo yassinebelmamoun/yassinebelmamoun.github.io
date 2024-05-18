@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.yassinebelmamoun.com/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://www.yassinebelmamoun.com/theme/pygments/manni.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://www.yassinebelmamoun.com/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yassinebelmamoun.com/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://www.yassinebelmamoun.com/theme/font-awesome/css/solid.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.yassinebelmamoun.com/static/custom.css">
+
+  <link rel="shortcut icon" href="https://www.yassinebelmamoun.com/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://www.yassinebelmamoun.com/images/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#4285f4">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#4285f4">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#4285f4">
+
+  <link href="https://www.yassinebelmamoun.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yassine Belmamoun - Personal Website Atom">
+
+
+
+ 
+
+<meta name="author" content="Yassine Belmamoun" />
+<meta name="description" content="In my previous article, I shared my journey of realizing the importance of creating content and finding the right balance between consuming and producing. This led me to search for the perfect blogging solution that met my specific requirements, and I ultimately chose Pelican, a static site generator built with …" />
+<meta name="keywords" content="">
+
+
+  <meta property="og:site_name" content="Yassine Belmamoun - Personal Website"/>
+  <meta property="og:title" content="Pelican Tutorial"/>
+  <meta property="og:description" content="In my previous article, I shared my journey of realizing the importance of creating content and finding the right balance between consuming and producing. This led me to search for the perfect blogging solution that met my specific requirements, and I ultimately chose Pelican, a static site generator built with …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="https://www.yassinebelmamoun.com/pelican-tutorial.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-05-18 00:00:00+07:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="https://www.yassinebelmamoun.com/author/yassine-belmamoun.html">
+  <meta property="article:section" content="Content Creation"/>
+  <meta property="og:image" content="https://www.yassinebelmamoun.com/images/profile_picture_002.jpg">
+
+  <title>Yassine Belmamoun - Personal Website &ndash; Pelican Tutorial</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="https://www.yassinebelmamoun.com/">
+      <img src="https://www.yassinebelmamoun.com/images/profile_picture_002.jpg" alt="Yassine Belmamoun" title="Yassine Belmamoun">
+    </a>
+
+    <h1>
+      <a href="https://www.yassinebelmamoun.com/">Yassine Belmamoun</a>
+    </h1>
+
+    <p>CTO @ Manatal.com <br/>Tech Entrepreneur & Software Engineer</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+            <li>
+              <a target="_self"
+                 href="https://www.yassinebelmamoun.com/pages/about.html#about">
+                About
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://www.yassinebelmamoun.com/pages/contact.html#contact">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="https://www.yassinebelmamoun.com/pages/press.html#press">
+                Press
+              </a>
+            </li>
+
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-linkedin"
+           href="https://www.linkedin.com/in/belmamoun-yassine/"
+           target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-github"
+           href="http://www.github.com/yassinebelmamoun"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-facebook"
+           href="https://www.facebook.com/yassine.belmamoun"
+           target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-envelope"
+rel="me"           href="mailto:belmamoun.yassine@gmail.com"
+           target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-rss"
+           href="/blog/feeds/all.atom.xml"
+           target="_blank">
+          <i class="fa-solid fa-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="https://www.yassinebelmamoun.com/">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="https://www.yassinebelmamoun.com/feeds/all.atom.xml">Atom</a>
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="pelican-tutorial">Pelican Tutorial</h1>
+    <p>
+      Posted on May 18, 2024 in <a href="https://www.yassinebelmamoun.com/category/content-creation.html">Content Creation</a>
+
+        &#8226; 4 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>In my <a href="https://www.yassinebelmamoun.com/start-your-blog-101.html">previous article</a>, I shared my journey of realizing the importance of creating content and finding the right balance between consuming and producing. This led me to search for the perfect blogging solution that met my specific requirements, and I ultimately chose Pelican, a static site generator built with Python. If you want to learn more about my decision-making process, check out <a href="https://www.yassinebelmamoun.com/start-your-blog-101.html">my article</a> on why I chose Pelican for my blog.</p>
+<p>Now, let's dive into the process of setting up Pelican locally and deploying your blog to GitHub Pages using Github Actions. By following this tutorial, you'll have a fully customizable, self-hosted blog that's free to maintain.</p>
+<h2>Installing Pelican Locally</h2>
+<p>To get started, install Pelican on your computer by running the following command in your terminal:</p>
+<div class="highlight"><pre><span></span><code>pip install pelican markdown
+</code></pre></div>
+
+<p>Next, create a directory for your blog and navigate into it:</p>
+<div class="highlight"><pre><span></span><code>mkdir my-blog
+cd my-blog
+</code></pre></div>
+
+<p>Then, generate the scaffolding for your blog using Pelican's ﻿quickstart command:</p>
+<div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre></div>
+
+<p>Answer the prompts, and you'll have the basic structure ready to go.</p>
+<h2>Writing and Previewing Blog Posts</h2>
+<p>To add new posts, create Markdown files in the <code>content</code> directory. 
+For example, create a file named <code>my-first-post.md</code>, open it in your favorite text editor, and add metadata like title, date, category, and tags at the top:</p>
+<div class="highlight"><pre><span></span><code>Title: My First Blog Post
+Date: 2023-05-18
+Category: Blogging
+Tags: pelican, python, github
+
+Hello World! Your content starts here.
+</code></pre></div>
+
+<p>Below the metadata, write your post using Markdown syntax. Pelican's support for Markdown ensures that your content will be reader-friendly and visually appealing.</p>
+<p>To preview your blog locally, generate the HTML files and start a local server:</p>
+<div class="highlight"><pre><span></span><code>pelican content
+pelican --listen
+</code></pre></div>
+
+<p>Open your browser and navigate to <code>http://localhost:8000</code> to see your blog in action. Experiment with different themes and settings in <code>pelicanconf.py</code> to customize your blog's appearance.</p>
+<h2>Configuring GitHub Pages</h2>
+<p>First, create a new repository on GitHub named <code>username.github.io</code>. Then, initialize a new git repository in your blog directory and add the GitHub repository as a remote:</p>
+<div class="highlight"><pre><span></span><code>git init
+git remote add origin https://github.com/username/username.github.io.git
+</code></pre></div>
+
+<p>Before automating the deployment process with GitHub Actions, you need to configure GitHub Pages for your repository. Follow these steps:</p>
+<ol>
+<li>Go to the repository's settings by clicking on the "Settings" tab.</li>
+<li>Scroll down to the "GitHub Pages" section.</li>
+<li>Under "Source," select the <code>gh-pages</code> branch to use for GitHub Pages.</li>
+<li>Click "Save" to apply the changes.</li>
+</ol>
+<p>GitHub Pages will now serve the content from the <code>gh-pages</code> branch at <code>https://yourusername.github.io</code>.</p>
+<p>If you want to use a custom domain for your blog, you can set it up in the "GitHub Pages" section as well. In my case, I use <code>yassinebelmamoun.com</code> as my custom domain. To do this:</p>
+<ol>
+<li>In the "GitHub Pages" section, under "Custom domain," enter your custom domain (e.g., <code>yassinebelmamoun.com</code>).</li>
+<li>Click "Save" to apply the changes.</li>
+<li>Create a file named <code>CNAME</code> in the root of your blog's source branch (e.g., <code>main</code> or <code>master</code>) and add your custom domain to it (e.g., <code>yassinebelmamoun.com</code>).</li>
+<li>Configure your domain's DNS settings to point to GitHub Pages. You'll need to add a CNAME record or an A record pointing to the GitHub Pages IP addresses. Refer to the GitHub Pages documentation for detailed instructions on configuring your domain.</li>
+</ol>
+<p>Once you've completed these steps, your blog will be accessible at your custom domain (e.g., <code>https://yassinebelmamoun.com</code>).</p>
+<h2>Automating Deployment with GitHub Actions</h2>
+<p>To automate the deployment of your Pelican blog to GitHub Pages, we'll use GitHub Actions. This way, whenever you push new content or make changes to your blog, GitHub Actions will automatically rebuild and deploy your site.</p>
+<p>To do this, create a new file named <code>.github/workflows/publish-to-ghp.yml</code> in your repository with the following content:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish to GitHub Pages</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">SITEURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.yassinebelmamoun.com</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-22.04</span>
+<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">    </span><span class="nt">concurrency</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.workflow }}-${{ github.ref }}</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.11&#39;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upgrade pip</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no"># install pip=&gt;20.1 to use &quot;pip cache dir&quot;</span>
+<span class="w">          </span><span class="no">python3 -m pip install --upgrade pip</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Get pip cache dir</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip-cache</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;dir=$(pip cache dir)&quot; &gt;&gt; $GITHUB_OUTPUT</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cache dependencies</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ steps.pip-cache.outputs.dir }}</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ runner.os }}-pip-${{ hashFiles(&#39;**/requirements.txt&#39;) }}</span>
+<span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">            </span><span class="no">${{ runner.os }}-pip-</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m pip install -r ./requirements.txt</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build site</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pelican content -o output -s pelicanconf.py</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v4</span>
+<span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./output</span>
+</code></pre></div>
+
+<p>This workflow file instructs GitHub Actions to set up a Python environment, install your requirements, build your Pelican site, and deploy the generated output folder to a branch called <code>gh-pages</code> using the <code>peaceiris/actions-gh-pages</code> action.</p>
+<p>A few important remarks:</p>
+<ul>
+<li>For GitHub Actions beginners: The <code>GITHUB_TOKEN</code> is automatically created by GitHub Actions to authenticate your workflow, not a personal access token. It's a special installation access token used to authenticate on behalf of the GitHub App. You can start deploying immediately without any configuration, as the token is available in the GitHub context even if not explicitly passed.</li>
+<li>Make sure that you have <code>requirements.txt</code> in your root folder.</li>
+<li>Make sure that you github branch is <code>main</code> (instead of <code>master</code>)</li>
+<li>Make sure to replace https://yassinebelmamoun.github.io with your Github repository</li>
+<li>Make sure to change your <code>pelicanconf.py</code> to:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SITEURL&#39;</span><span class="p">,</span> <span class="s2">&quot;http://localhost:8000&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Commit your changes and push to the <code>main</code> branch of your GitHub repository:</p>
+<div class="highlight"><pre><span></span><code>git add .
+git commit -m &quot;Set up Pelican blog with GitHub Actions&quot;
+git push -u origin main
+</code></pre></div>
+
+<p>GitHub Actions will automatically trigger the workflow, build your Pelican site, and deploy it to GitHub Pages. After a few minutes, visit your website to see your live blog!</p>
+<h2>Embrace the Power of Pelican and GitHub Actions</h2>
+<p>With Pelican and GitHub Actions working together, you have a powerful and efficient setup for your blog. You can focus on creating amazing content while the automation takes care of the rest.</p>
+<p>Thank you for reading this tutorial on setting up Pelican and deploying your blog to GitHub Pages. I hope you found it helpful and informative.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>
+  &copy; 2024  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Yassine Belmamoun - Personal Website ",
+  "url" : "https://www.yassinebelmamoun.com",
+  "image": "https://www.yassinebelmamoun.com/images/profile_picture_002.jpg",
+  "description": "Yassine Belmamoun - Software Engineer & Tech Entrepreneur"
+}
+</script>
+</body>
+</html>
