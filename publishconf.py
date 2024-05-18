@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
+import sys
 
 # This file is only used if you use `make publish` or
 # explicitly specify it as your config file.
 
-import os
-import sys
 
 sys.path.append(os.curdir)
 
@@ -27,5 +27,6 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = "yassinebelmamoun"
-GOOGLE_ANALYTICS = "UA-138287199-2"
+# GOOGLE_ANALYTICS = "UA-138287199-2"
+GOOGLE_GLOBAL_SITE_TAG = "GTM-5ZLSRDNL"
 TIMEZONE = "Asia/Bangkok"
