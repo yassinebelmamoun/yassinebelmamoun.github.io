@@ -5,3 +5,4 @@ output/
 *.swo
 pelican-plugins/*
 .obsidian
+.Ulysses-Group.plist
