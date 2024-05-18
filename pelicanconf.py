@@ -45,7 +45,7 @@ DEFAULT_PAGINATION = 10
 # --------------------
 
 # Default Theme
-THEME = "./pelican-themes/Flex"
+THEME = "./themes/Flex"
 
 PLUGIN_PATHS = ["/Users/yassine/Documents/repos/pelican-plugins"]
 PLUGINS = ["post_stats"]
