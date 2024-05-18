@@ -50,7 +50,7 @@ THEME = "./themes/Flex"
 
 # PLUGIN_PATHS = ["/Users/yassine/Documents/repos/pelican-plugins"]
 PLUGIN_PATHS = ["./plugins"]
-PLUGINS = ["post_stats"]
+PLUGINS = ["post_stats", "sitemap"]
 
 
 SITENAME = "Yassine Belmamoun - Personal Website"
@@ -99,3 +99,17 @@ EXTRA_PATH_METADATA = {
     "extra/CNAME": {"path": "CNAME"},
 }
 CUSTOM_CSS = "static/custom.css"
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 1.0,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "weekly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
+}

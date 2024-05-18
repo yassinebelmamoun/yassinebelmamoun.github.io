@@ -9,6 +9,7 @@ typogrify = "*"
 beautifulsoup4 = "*"
 markdown = "==3.4.4"
 ghp-import = "*"
+pelican-sitemap = "*"
 
 [dev-packages]
 
