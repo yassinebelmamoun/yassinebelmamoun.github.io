@@ -14,7 +14,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = "https://yassinebelmamoun.com"
+SITEURL = "https://www.yassinebelmamoun.com"
 SITELOGO = SITEURL + "/images/profile_picture_002.jpg"
 FAVICON = SITEURL + "/images/favicon/favicon.ico"
 RELATIVE_URLS = False

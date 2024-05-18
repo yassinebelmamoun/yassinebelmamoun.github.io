@@ -44,7 +44,7 @@ jobs:
         run: python3 -m pip install -r ./requirements.txt
 
       - name: Build site
-        run: pelican content -o output -s pelicanconf.py
+        run: pelican content -o output -s publishconf.py
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

@@ -1,8 +1,8 @@
 Title: From PaaS to K8s: Lessons Learned on Our Startup's Infrastructure Journey
-Date: 2024-05-17 12:00
+Date: 2024-05-18
 Category: Software Engineering
 Slug: migration-from-paas-to-kubernetes
-status: draft
+
 
 You've probably heard the advice a million times: when you're starting a new software project or company, just focus on building your product and creating value for customers. Don't get bogged down in infrastructure and DevOps. Use a Platform-as-a-Service (PaaS) like Heroku and iterate quickly.
 

@@ -82,15 +82,12 @@ To do this, create a new file named `.github/workflows/publish-to-ghp.yml` in yo
 
 ```yaml
 name: Publish to GitHub Pages
-
 on:
   push:
     branches:
       - main
-
 env:
   SITEURL: https://www.yassinebelmamoun.com
-
 jobs:
   deploy:
     runs-on: ubuntu-22.04
@@ -100,21 +97,17 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
-
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
           python-version: '3.11'
-
       - name: Upgrade pip
         run: |
           # install pip=>20.1 to use "pip cache dir"
           python3 -m pip install --upgrade pip
-
       - name: Get pip cache dir
         id: pip-cache
         run: echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
-
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -122,13 +115,10 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-
       - name: Install dependencies
         run: python3 -m pip install -r ./requirements.txt
-
       - name: Build site
         run: pelican content -o output -s pelicanconf.py
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
@@ -146,12 +136,7 @@ A few important remarks:
 - Make sure that you have `requirements.txt` in your root folder.
 - Make sure that you github branch is `main` (instead of `master`)
 - Make sure to replace https://yassinebelmamoun.github.io with your Github repository
-- Make sure to change your `pelicanconf.py` to:
-
-```python
-import os
-SITEURL = os.environ.get('SITEURL', "http://localhost:8000")
-```
+- Make sure to configure your domain name in your `publishconf.py`
 
 
 Commit your changes and push to the `main` branch of your GitHub repository:
