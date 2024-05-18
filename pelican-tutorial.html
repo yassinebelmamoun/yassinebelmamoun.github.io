@@ -40,6 +40,14 @@
   <link href="https://www.yassinebelmamoun.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yassine Belmamoun - Personal Website Atom">
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5ZLSRDNL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GTM-5ZLSRDNL');
+</script>
 
  
 
@@ -232,15 +240,12 @@ git remote add origin https://github.com/username/username.github.io.git
 <p>To automate the deployment of your Pelican blog to GitHub Pages, we'll use GitHub Actions. This way, whenever you push new content or make changes to your blog, GitHub Actions will automatically rebuild and deploy your site.</p>
 <p>To do this, create a new file named <code>.github/workflows/publish-to-ghp.yml</code> in your repository with the following content:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish to GitHub Pages</span>
-
 <span class="nt">on</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">push</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-
 <span class="nt">env</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">SITEURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.yassinebelmamoun.com</span>
-
 <span class="nt">jobs</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-22.04</span>
@@ -250,21 +255,17 @@ git remote add origin https://github.com/username/username.github.io.git
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.workflow }}-${{ github.ref }}</span>
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup Python</span>
 <span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v3</span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.11&#39;</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upgrade pip</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">          </span><span class="no"># install pip=&gt;20.1 to use &quot;pip cache dir&quot;</span>
 <span class="w">          </span><span class="no">python3 -m pip install --upgrade pip</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Get pip cache dir</span>
 <span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip-cache</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;dir=$(pip cache dir)&quot; &gt;&gt; $GITHUB_OUTPUT</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cache dependencies</span>
 <span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v3</span>
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span>
@@ -272,13 +273,10 @@ git remote add origin https://github.com/username/username.github.io.git
 <span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ runner.os }}-pip-${{ hashFiles(&#39;**/requirements.txt&#39;) }}</span>
 <span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">            </span><span class="no">${{ runner.os }}-pip-</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m pip install -r ./requirements.txt</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build site</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pelican content -o output -s pelicanconf.py</span>
-
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy</span>
 <span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v4</span>
 <span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
@@ -294,12 +292,8 @@ git remote add origin https://github.com/username/username.github.io.git
 <li>Make sure that you have <code>requirements.txt</code> in your root folder.</li>
 <li>Make sure that you github branch is <code>main</code> (instead of <code>master</code>)</li>
 <li>Make sure to replace https://yassinebelmamoun.github.io with your Github repository</li>
-<li>Make sure to change your <code>pelicanconf.py</code> to:</li>
+<li>Make sure to configure your domain name in your <code>publishconf.py</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">SITEURL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SITEURL&#39;</span><span class="p">,</span> <span class="s2">&quot;http://localhost:8000&quot;</span><span class="p">)</span>
-</code></pre></div>
-
 <p>Commit your changes and push to the <code>main</code> branch of your GitHub repository:</p>
 <div class="highlight"><pre><span></span><code>git add .
 git commit -m &quot;Set up Pelican blog with GitHub Actions&quot;

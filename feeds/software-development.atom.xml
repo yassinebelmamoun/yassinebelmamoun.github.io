@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yassine Belmamoun - Personal Website - Software Development</title><link href="https://www.yassinebelmamoun.com/" rel="alternate"></link><link href="https://www.yassinebelmamoun.com/feeds/software-development.atom.xml" rel="self"></link><id>https://www.yassinebelmamoun.com/</id><updated>2021-01-04T21:50:00+07:00</updated><subtitle>CTO @ Manatal.com &lt;br/&gt;Tech Entrepreneur &amp; Software Engineer</subtitle><entry><title>Technical Debt Explained</title><link href="https://www.yassinebelmamoun.com/technical-debt-explained.html" rel="alternate"></link><published>2021-01-04T21:50:00+07:00</published><updated>2021-01-04T21:50:00+07:00</updated><author><name>Yassine Belmamoun</name></author><id>tag:www.yassinebelmamoun.com,2021-01-04:/technical-debt-explained.html</id><summary type="html">&lt;h2&gt;What is technical debt in software development&lt;/h2&gt;
+&lt;p&gt;Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasizes short-term gains over long-term maintainability.&lt;/p&gt;
+&lt;p&gt;We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;What is technical debt in software development&lt;/h2&gt;
+&lt;p&gt;Technical debt is the cumulative effect of all the tradeoffs made during the development of software that emphasizes short-term gains over long-term maintainability.&lt;/p&gt;
+&lt;p&gt;We measure technical debt as the cost of additional work required to move from a relatively poorly designed solution to an optimal solution.&lt;/p&gt;
+&lt;h2&gt;The analogy of financial debt&lt;/h2&gt;
+&lt;p&gt;If technical debt is not repaid, it can accumulate 'interest', making it harder to implement changes.&lt;/p&gt;
+&lt;p&gt;And unaddressed technical debt increases software entropy. Ward Cunningham summarized it in an elegant manner:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite... The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as &lt;a href="https://en.wikipedia.org/wiki/Interest"&gt;interest&lt;/a&gt; on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation, &lt;a href="https://en.wikipedia.org/wiki/Object-oriented_programming"&gt;object-oriented&lt;/a&gt; or otherwise."
+— &lt;a href="https://en.wikipedia.org/wiki/Ward_Cunningham"&gt;Ward Cunningham&lt;/a&gt;, 1992&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Acceptance of the technical debt&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Technical debt is bad, but (more often than not) optimal."
+&lt;a href="http://www.paulgraham.com"&gt;Paul Graham&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Technical debt is not necessarily a bad thing, and sometimes it is required to move projects forward.&lt;/p&gt;
+&lt;p&gt;Especially for young start-ups,  accruing technical debt makes perfect sense. The rational behind is: pay for today’s progress with tomorrow’s efforts, until it’s clear whether the company will survive in the market. It’s simple economics. Since most startups fail, high chances are the company will simply fail and the debt will never need to be paid.&lt;/p&gt;
+&lt;p&gt;This is what we would call a deliberate debt in opposition to another form: non-deliberate technical debt. Deliberate debt happens when Technology and Business teams are aligned. The goal of the organization is to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deliver progress faster&lt;/li&gt;
+&lt;li&gt;Reach the product-market fit faster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While keepin in mind that the engineering team is accumulating technical debt that must be paid eventually.&lt;/p&gt;
+&lt;h2&gt;When the technical debt becomes a problem&lt;/h2&gt;
+&lt;p&gt;Once a company has achieved “product-market fit” and is off to the races, it’s no longer a great idea to just stack debt on top of debt.&lt;/p&gt;
+&lt;p&gt;The real problem with accumulating technical debt is that the business will never want to pay it off. Stakeholders and the rest of the company might have trouble relating to the abstract nature of resolving technical debt. Senior management might hear: “engineering is requesting permission to move at half pace for the next 3 months.” when engineering is talking about technical debt. Paying off the technical debt ends up being a very difficult thing to rally stakeholder support for.&lt;/p&gt;
+&lt;p&gt;There is usually no trigger to address the technical debt issue: The impact on the velocity is slow and cumulative that we do not experience it suddenly. We learn to live with it.&lt;/p&gt;
+&lt;p&gt;We tend to accept as a matter of fact the consequences of the technical debt:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Disalignment between Technology and Business team: There is a feeling of constant misunderstanding between the two teams&lt;/li&gt;
+&lt;li&gt;Slow down of progress: It is more and more difficult to build new features and functionalities&lt;/li&gt;
+&lt;li&gt;Impact on the performance and stability: Software become a house of cards, the smallest change might have terrible consequences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Death by Tech Debt&lt;/h2&gt;
+&lt;p&gt;Death-by-tech-debt is a slow kind of death. Let's explore some consequences of the tech debt to understand better how it can kill a business.&lt;/p&gt;
+&lt;p&gt;We can distinguish cash costs vs non-cash cost issues.&lt;/p&gt;
+&lt;p&gt;Some examples of cash cost consequences of technical are:
+- Need to recruit more people to maintain the system
+- Extra time required to build new features
+- Fines due to security breaches (e.g. SLA)
+- Lost sales following the system outages (e.g. churn)&lt;/p&gt;
+&lt;p&gt;The non-cash costs of the tech debt can also be pretty harmful to a business: For instance, the tech debt can make the engineer team incapable to adapt to the changes in the market.&lt;/p&gt;
+&lt;h2&gt;Signs of Technical Bankruptcy&lt;/h2&gt;
+&lt;p&gt;If you have any of the following signs, it is undoubtly time to take actions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The company sidelines engineering’s concerns as a nice-to-have&lt;/li&gt;
+&lt;li&gt;The developers complain about the codebase becoming quite literally a “difficult work environment”&lt;/li&gt;
+&lt;li&gt;New features start shipping very slowly. Or stop altogether&lt;/li&gt;
+&lt;li&gt;Gradual attrition of all engineers who like building things until only “maintenance-style” engineers remain&lt;/li&gt;
+&lt;li&gt;Company falls irrecoverably behind the times&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Eventually the codebase goes bankrupt. And the only practical choice will be to rebuild the entire thing from the ground up&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Non-tech executives must understand that if the engineers have been release great things for the past year or so, chances are they’re selling a bit of the future to do it. This is normal. But be prepared for the bill to come due.&lt;/p&gt;
+&lt;p&gt;Incremental payment of technical debt is better, much like slowly paying off a line of credit. It’s something that can be consciously incorporated into engineering operations while also investing in new work.&lt;/p&gt;
+&lt;p&gt;But engineering teams need buy-in from management to do this well. When your engineering team talks about technical debt, listen. Listen like you would listen to the finance team talking about financial debt.&lt;/p&gt;
+&lt;p&gt;The future of your business could very well depend on it: The cost of never paying down this technical debt is clear; eventually the cost to deliver functionality will become so high and the speed of it so slow that it is easy for a well-designed competitive software product to overtake the badly-designed software in terms of features.&lt;/p&gt;</content><category term="Software Development"></category></entry></feed>

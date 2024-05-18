@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yassine Belmamoun - Personal Website - Content Creation</title><link href="https://www.yassinebelmamoun.com/" rel="alternate"></link><link href="https://www.yassinebelmamoun.com/feeds/content-creation.atom.xml" rel="self"></link><id>https://www.yassinebelmamoun.com/</id><updated>2024-05-18T00:00:00+07:00</updated><subtitle>CTO @ Manatal.com &lt;br/&gt;Tech Entrepreneur &amp; Software Engineer</subtitle><entry><title>Pelican Tutorial</title><link href="https://www.yassinebelmamoun.com/pelican-tutorial.html" rel="alternate"></link><published>2024-05-18T00:00:00+07:00</published><updated>2024-05-18T00:00:00+07:00</updated><author><name>Yassine Belmamoun</name></author><id>tag:www.yassinebelmamoun.com,2024-05-18:/pelican-tutorial.html</id><summary type="html">&lt;p&gt;In my &lt;a href="https://www.yassinebelmamoun.com/start-your-blog-101.html"&gt;previous article&lt;/a&gt;, I shared my journey of realizing the importance of creating content and finding the right balance between consuming and producing. This led me to search for the perfect blogging solution that met my specific requirements, and I ultimately chose Pelican, a static site generator built with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In my &lt;a href="https://www.yassinebelmamoun.com/start-your-blog-101.html"&gt;previous article&lt;/a&gt;, I shared my journey of realizing the importance of creating content and finding the right balance between consuming and producing. This led me to search for the perfect blogging solution that met my specific requirements, and I ultimately chose Pelican, a static site generator built with Python. If you want to learn more about my decision-making process, check out &lt;a href="https://www.yassinebelmamoun.com/start-your-blog-101.html"&gt;my article&lt;/a&gt; on why I chose Pelican for my blog.&lt;/p&gt;
+&lt;p&gt;Now, let's dive into the process of setting up Pelican locally and deploying your blog to GitHub Pages using Github Actions. By following this tutorial, you'll have a fully customizable, self-hosted blog that's free to maintain.&lt;/p&gt;
+&lt;h2&gt;Installing Pelican Locally&lt;/h2&gt;
+&lt;p&gt;To get started, install Pelican on your computer by running the following command in your terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican markdown
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, create a directory for your blog and navigate into it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir my-blog
+cd my-blog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, generate the scaffolding for your blog using Pelican's ﻿quickstart command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican-quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Answer the prompts, and you'll have the basic structure ready to go.&lt;/p&gt;
+&lt;h2&gt;Writing and Previewing Blog Posts&lt;/h2&gt;
+&lt;p&gt;To add new posts, create Markdown files in the &lt;code&gt;content&lt;/code&gt; directory. 
+For example, create a file named &lt;code&gt;my-first-post.md&lt;/code&gt;, open it in your favorite text editor, and add metadata like title, date, category, and tags at the top:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Title: My First Blog Post
+Date: 2023-05-18
+Category: Blogging
+Tags: pelican, python, github
+
+Hello World! Your content starts here.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Below the metadata, write your post using Markdown syntax. Pelican's support for Markdown ensures that your content will be reader-friendly and visually appealing.&lt;/p&gt;
+&lt;p&gt;To preview your blog locally, generate the HTML files and start a local server:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican content
+pelican --listen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Open your browser and navigate to &lt;code&gt;http://localhost:8000&lt;/code&gt; to see your blog in action. Experiment with different themes and settings in &lt;code&gt;pelicanconf.py&lt;/code&gt; to customize your blog's appearance.&lt;/p&gt;
+&lt;h2&gt;Configuring GitHub Pages&lt;/h2&gt;
+&lt;p&gt;First, create a new repository on GitHub named &lt;code&gt;username.github.io&lt;/code&gt;. Then, initialize a new git repository in your blog directory and add the GitHub repository as a remote:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git init
+git remote add origin https://github.com/username/username.github.io.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Before automating the deployment process with GitHub Actions, you need to configure GitHub Pages for your repository. Follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to the repository's settings by clicking on the "Settings" tab.&lt;/li&gt;
+&lt;li&gt;Scroll down to the "GitHub Pages" section.&lt;/li&gt;
+&lt;li&gt;Under "Source," select the &lt;code&gt;gh-pages&lt;/code&gt; branch to use for GitHub Pages.&lt;/li&gt;
+&lt;li&gt;Click "Save" to apply the changes.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;GitHub Pages will now serve the content from the &lt;code&gt;gh-pages&lt;/code&gt; branch at &lt;code&gt;https://yourusername.github.io&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to use a custom domain for your blog, you can set it up in the "GitHub Pages" section as well. In my case, I use &lt;code&gt;yassinebelmamoun.com&lt;/code&gt; as my custom domain. To do this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In the "GitHub Pages" section, under "Custom domain," enter your custom domain (e.g., &lt;code&gt;yassinebelmamoun.com&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Click "Save" to apply the changes.&lt;/li&gt;
+&lt;li&gt;Create a file named &lt;code&gt;CNAME&lt;/code&gt; in the root of your blog's source branch (e.g., &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;master&lt;/code&gt;) and add your custom domain to it (e.g., &lt;code&gt;yassinebelmamoun.com&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Configure your domain's DNS settings to point to GitHub Pages. You'll need to add a CNAME record or an A record pointing to the GitHub Pages IP addresses. Refer to the GitHub Pages documentation for detailed instructions on configuring your domain.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you've completed these steps, your blog will be accessible at your custom domain (e.g., &lt;code&gt;https://yassinebelmamoun.com&lt;/code&gt;).&lt;/p&gt;
+&lt;h2&gt;Automating Deployment with GitHub Actions&lt;/h2&gt;
+&lt;p&gt;To automate the deployment of your Pelican blog to GitHub Pages, we'll use GitHub Actions. This way, whenever you push new content or make changes to your blog, GitHub Actions will automatically rebuild and deploy your site.&lt;/p&gt;
+&lt;p&gt;To do this, create a new file named &lt;code&gt;.github/workflows/publish-to-ghp.yml&lt;/code&gt; in your repository with the following content:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Publish to GitHub Pages&lt;/span&gt;
+&lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;push&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;branches&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;main&lt;/span&gt;
+&lt;span class="nt"&gt;env&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;SITEURL&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;https://www.yassinebelmamoun.com&lt;/span&gt;
+&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;runs-on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;ubuntu-22.04&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;permissions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;write&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;concurrency&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nt"&gt;group&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{ github.workflow }}-${{ github.ref }}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;steps&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/checkout@v3&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Setup Python&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/setup-python@v3&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;python-version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#39;3.11&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Upgrade pip&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="no"&gt;# install pip=&amp;gt;20.1 to use &amp;quot;pip cache dir&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="no"&gt;python3 -m pip install --upgrade pip&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Get pip cache dir&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;id&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip-cache&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;echo &amp;quot;dir=$(pip cache dir)&amp;quot; &amp;gt;&amp;gt; $GITHUB_OUTPUT&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Cache dependencies&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/cache@v3&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{ steps.pip-cache.outputs.dir }}&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;key&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{ runner.os }}-pip-${{ hashFiles(&amp;#39;**/requirements.txt&amp;#39;) }}&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;restore-keys&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="no"&gt;${{ runner.os }}-pip-&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Install dependencies&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python3 -m pip install -r ./requirements.txt&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Build site&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;pelican content -o output -s pelicanconf.py&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Deploy&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;peaceiris/actions-gh-pages@v4&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;github.ref == &amp;#39;refs/heads/main&amp;#39;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;with&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;github_token&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{ secrets.GITHUB_TOKEN }}&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;publish_dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;./output&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This workflow file instructs GitHub Actions to set up a Python environment, install your requirements, build your Pelican site, and deploy the generated output folder to a branch called &lt;code&gt;gh-pages&lt;/code&gt; using the &lt;code&gt;peaceiris/actions-gh-pages&lt;/code&gt; action.&lt;/p&gt;
+&lt;p&gt;A few important remarks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For GitHub Actions beginners: The &lt;code&gt;GITHUB_TOKEN&lt;/code&gt; is automatically created by GitHub Actions to authenticate your workflow, not a personal access token. It's a special installation access token used to authenticate on behalf of the GitHub App. You can start deploying immediately without any configuration, as the token is available in the GitHub context even if not explicitly passed.&lt;/li&gt;
+&lt;li&gt;Make sure that you have &lt;code&gt;requirements.txt&lt;/code&gt; in your root folder.&lt;/li&gt;
+&lt;li&gt;Make sure that you github branch is &lt;code&gt;main&lt;/code&gt; (instead of &lt;code&gt;master&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Make sure to replace https://yassinebelmamoun.github.io with your Github repository&lt;/li&gt;
+&lt;li&gt;Make sure to configure your domain name in your &lt;code&gt;publishconf.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Commit your changes and push to the &lt;code&gt;main&lt;/code&gt; branch of your GitHub repository:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git add .
+git commit -m &amp;quot;Set up Pelican blog with GitHub Actions&amp;quot;
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;GitHub Actions will automatically trigger the workflow, build your Pelican site, and deploy it to GitHub Pages. After a few minutes, visit your website to see your live blog!&lt;/p&gt;
+&lt;h2&gt;Embrace the Power of Pelican and GitHub Actions&lt;/h2&gt;
+&lt;p&gt;With Pelican and GitHub Actions working together, you have a powerful and efficient setup for your blog. You can focus on creating amazing content while the automation takes care of the rest.&lt;/p&gt;
+&lt;p&gt;Thank you for reading this tutorial on setting up Pelican and deploying your blog to GitHub Pages. I hope you found it helpful and informative.&lt;/p&gt;</content><category term="Content Creation"></category></entry></feed>
