@@ -6,3 +6,6 @@ output/
 pelican-plugins/*
 .obsidian
 .Ulysses-Group.plist
+
+my-folder/*
+!my-folder/Flex/*

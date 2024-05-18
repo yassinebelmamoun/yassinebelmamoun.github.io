@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+
 from datetime import datetime
 
 AUTHOR = "Yassine Belmamoun"
@@ -44,7 +45,7 @@ DEFAULT_PAGINATION = 10
 # --------------------
 
 # Default Theme
-THEME = "/Users/yassine/Documents/repos/pelican-themes/Flex"
+THEME = "./pelican-themes/Flex"
 
 PLUGIN_PATHS = ["/Users/yassine/Documents/repos/pelican-plugins"]
 PLUGINS = ["post_stats"]
