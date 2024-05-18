@@ -7,7 +7,7 @@ name = "pypi"
 pelican = "*"
 typogrify = "*"
 beautifulsoup4 = "*"
-markdown = "*"
+markdown = "==3.4.4"
 ghp-import = "*"
 
 [dev-packages]
