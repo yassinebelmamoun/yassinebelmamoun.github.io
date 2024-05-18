@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
 from datetime import datetime
 
 AUTHOR = "Yassine Belmamoun"
-SITEURL = "http://localhost:8000"
+SITEURL = os.environ.get('SITEURL', "http://localhost:8000")
 
 PATH = "content"
 OUTPUT_PATH = "output/"
