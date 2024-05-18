@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="http://localhost:8000/theme/pygments/manni.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/solid.css">
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/static/custom.css">
+
+  <link rel="shortcut icon" href="http://localhost:8000/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="http://localhost:8000/images/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#4285f4">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#4285f4">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#4285f4">
+
+  <link href="http://localhost:8000/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yassine Belmamoun - Personal Website Atom">
+
+
+
+ 
+
+<meta name="author" content="Yassine Belmamoun" />
+<meta name="description" content="You&#39;ve probably heard the advice a million times: when you&#39;re starting a new software project or company, just focus on building your product and creating value for customers. Don&#39;t get bogged down in infrastructure and DevOps. Use a Platform-as-a-Service (PaaS) like Heroku and iterate quickly. This is 100% the right …" />
+<meta name="keywords" content="">
+
+
+  <meta property="og:site_name" content="Yassine Belmamoun - Personal Website"/>
+  <meta property="og:title" content="From PaaS to K8s: Lessons Learned on Our Startup&#39;s Infrastructure Journey"/>
+  <meta property="og:description" content="You&#39;ve probably heard the advice a million times: when you&#39;re starting a new software project or company, just focus on building your product and creating value for customers. Don&#39;t get bogged down in infrastructure and DevOps. Use a Platform-as-a-Service (PaaS) like Heroku and iterate quickly. This is 100% the right …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="http://localhost:8000/drafts/migration-from-paas-to-kubernetes.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-05-17 12:00:00+07:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="http://localhost:8000/author/yassine-belmamoun.html">
+  <meta property="article:section" content="Software Engineering"/>
+  <meta property="og:image" content="http://localhost:8000/images/profile_picture_002.jpg">
+
+  <title>Yassine Belmamoun - Personal Website &ndash; From PaaS to K8s: Lessons Learned on Our Startup&#39;s Infrastructure Journey</title>
+
+
+</head>
+<body class="light-theme">
+
+<aside>
+  <div>
+    <a href="http://localhost:8000/">
+      <img src="http://localhost:8000/images/profile_picture_002.jpg" alt="Yassine Belmamoun" title="Yassine Belmamoun">
+    </a>
+
+    <h1>
+      <a href="http://localhost:8000/">Yassine Belmamoun</a>
+    </h1>
+
+    <p>CTO @ Manatal.com <br/>Tech Entrepreneur & Software Engineer</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+            <li>
+              <a target="_self"
+                 href="http://localhost:8000/pages/about.html#about">
+                About
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="http://localhost:8000/pages/contact.html#contact">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a target="_self"
+                 href="http://localhost:8000/pages/press.html#press">
+                Press
+              </a>
+            </li>
+
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-linkedin"
+           href="https://www.linkedin.com/in/belmamoun-yassine/"
+           target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-github"
+           href="http://www.github.com/yassinebelmamoun"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-facebook"
+           href="https://www.facebook.com/yassine.belmamoun"
+           target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-envelope"
+rel="me"           href="mailto:belmamoun.yassine@gmail.com"
+           target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      <li>
+        <a class="sc-rss"
+           href="/blog/feeds/all.atom.xml"
+           target="_blank">
+          <i class="fa-solid fa-rss"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="http://localhost:8000/">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+  <a href="http://localhost:8000/feeds/all.atom.xml">Atom</a>
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="migration-from-paas-to-kubernetes">From PaaS to K8s: Lessons Learned on Our Startup's Infrastructure Journey</h1>
+    <p>
+      Posted on May 17, 2024 in <a href="http://localhost:8000/category/software-engineering.html">Software Engineering</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>You've probably heard the advice a million times: when you're starting a new software project or company, just focus on building your product and creating value for customers. Don't get bogged down in infrastructure and DevOps. Use a Platform-as-a-Service (PaaS) like Heroku and iterate quickly.</p>
+<p>This is 100% the right call in the beginning. When we founded Manatal, we hosted everything on Heroku initially. It allowed us to rapidly develop our software without worrying about servers, deployments, scaling, etc. We could push new code and features fast.</p>
+<p>But there comes a point, as your startup grows, where you start pushing the limits of a PaaS. You need more granular control, better visibility into your systems, and the ability to optimize performance. About 2 years ago, we reached that inflection point at Manatal. So we decided to take the plunge and migrate our entire infrastructure from Heroku to Kubernetes on AWS.</p>
+<p>Was it challenging? Absolutely. Running your own Kubernetes clusters is no joke, especially compared to the simplicity of a PaaS. Suddenly you're on the hook for cluster management, the full CI/CD pipeline, monitoring, security, and a whole lot more. A lot more power but a lot more responsibility too.</p>
+<p>We had to level up our skills across the board - from containerizing microservices to deploying infrastructure-as-code. We evaluated different approaches and made opinionated choices. Kustomize instead of Helm. ArgoCD for continuous deployment. Datadog for observability. GitHub Actions for CI. KEDA and cluster-autoscaler for intelligent scaling. The list goes on.</p>
+<p>But now, I can confidently say it was worth it. We have so much more control and visibility now. When issues emerge, we can dive deep. We can tweak and optimize every layer.</p>
+<p>We also realized huge performance gains and cost savings compared to Heroku's more constrained (and expensive) resources. With the ability to use custom machine types and dynamic scaling based on load, our utilization is way up and our hosting bill is way down. But those savings don't just pad our bottom line. They go directly into making our product better, faster, and more feature-rich for our customers. Every dollar saved is a dollar invested in delivering more value to them.</p>
+<p>Migration to Kubernetes also forced us to modernize our architecture and development processes in a good way. Decomposing monoliths into microservices. Defining resources declaratively. Automating everything. Committing to gitops and immutable deployments. It can be a painful upgrade but you come out the other side as a more mature engineering organization.</p>
+<p>Now, I won't sugarcoat it. Kubernetes is complex and it's not the right choice for every company. You need to assess your team's capabilities and your scale needs realistically. Start with a PaaS. Squeeze everything you can out of that model. But when you're ready to unlock the next level of performance and control, Kubernetes will be waiting for you. The lessons you learn along the way will make you a better technologist.</p>
+<p>If you're considering making the jump from Heroku to Kubernetes on AWS like we did, here's a detailed rundown of what you'll need to learn and the tools we recommend:</p>
+<ol>
+<li><strong>Containerization:</strong> Get comfortable with Docker and learn how to package your application into containers. This involves writing Dockerfiles, optimizing image sizes, and pushing images to a container registry. We use Amazon Elastic Container Registry (ECR) for storing and managing our Docker images securely.</li>
+<li><strong>Kubernetes Concepts:</strong> Master the fundamentals of Kubernetes architecture, including Pods, Services, Deployments, StatefulSets, and more. Learn how to define and manage application configurations using Kubernetes manifests. We use Kustomize for templating and managing Kubernetes manifests in a more modular and maintainable way.</li>
+<li><strong>EKS Cluster Management:</strong> Learn how to create, configure, and operate Kubernetes clusters on AWS using EKS. This involves defining worker node groups, configuring the Kubernetes API server, setting up IAM roles, and integrating with other AWS services. We use eksctl, a powerful CLI tool, to simplify EKS cluster creation and management.</li>
+<li><strong>Observability Stack:</strong> Build a robust monitoring and logging solution for your Kubernetes clusters and applications. We use Datadog for log management and application performance monitoring (APM). It provides deep visibility into cluster health, resource utilization, and application metrics.</li>
+<li><strong>Gitops Workflow:</strong> Embrace gitops principles and define all your infrastructure and application configurations as code in Git repositories. We use ArgoCD for continuous deployment and synchronization of our Kubernetes manifests. It ensures that our deployed applications always match our desired state defined in Git.</li>
+<li><strong>AWS Ecosystem Integration:</strong> Familiarize yourself with the broader AWS ecosystem and learn how to integrate Kubernetes with other AWS services. For example, we use AWS Secrets Manager for securely storing and managing secrets, and Kubernetes external-secrets to sync those secrets into our clusters.</li>
+<li><strong>Scaling and Optimization:</strong> Learn how to scale your Kubernetes applications efficiently. We use Kubernetes Horizontal Pod Autoscaler (HPA) and Cluster Autoscaler to automatically adjust the number of pods and nodes based on resource utilization. For more advanced scaling scenarios, we leverage Kubernetes Event-Driven Autoscaling (KEDA).</li>
+<li><strong>Development Workflow:</strong> Adopt a smooth development workflow for building, testing, and deploying your applications. We use GitHub Actions for continuous integration (CI) pipelines to build and test our code changes automatically. For local Kubernetes development and troubleshooting, we rely on tools like kubectl and K9s, a terminal-based UI for interacting with Kubernetes clusters.</li>
+</ol>
+<p>Remember, the journey to Kubernetes proficiency is gradual. Start with the basics, experiment with different tools, and learn from the vibrant Kubernetes community. As you gain experience, you'll be able to optimize your infrastructure further and tackle more advanced scenarios.
+Embracing Kubernetes on AWS has been a game-changer for our startup, enabling us to scale seamlessly, improve efficiency, and unlock new possibilities. If you're ready to embark on this transformative journey, dive in with curiosity and determination. The effort you put in will pay off greatly in the long run.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+
+
+</article>
+
+<footer>
+<p>
+  &copy; 2024  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p></footer>  </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Yassine Belmamoun - Personal Website ",
+  "url" : "http://localhost:8000",
+  "image": "http://localhost:8000/images/profile_picture_002.jpg",
+  "description": "Yassine Belmamoun - Software Engineer & Tech Entrepreneur"
+}
+</script>
+</body>
+</html>

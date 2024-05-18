@@ -44,23 +44,23 @@
  
 
 <meta name="author" content="Yassine Belmamoun" />
-<meta name="description" content="Hello World! I finally decided to make a blog to share thoughts and notes. Anyway, here&#39;s the first post out of many to come. I will add a newsletter later." />
+<meta name="description" content="Every week, I invest a substantial amount of time reading, exploring podcasts and watching videos, all in the pursuit of knowledge. However, I&#39;ve uncovered a missing piece in this quest: passive consumption of information isn&#39;t enough, there is immense value in creating content, exposing it to a wide audience to …" />
 <meta name="keywords" content="">
 
 
   <meta property="og:site_name" content="Yassine Belmamoun - Personal Website"/>
-  <meta property="og:title" content="Hello World! This is the first article!"/>
-  <meta property="og:description" content="Hello World! I finally decided to make a blog to share thoughts and notes. Anyway, here&#39;s the first post out of many to come. I will add a newsletter later."/>
+  <meta property="og:title" content="Blogging made simple"/>
+  <meta property="og:description" content="Every week, I invest a substantial amount of time reading, exploring podcasts and watching videos, all in the pursuit of knowledge. However, I&#39;ve uncovered a missing piece in this quest: passive consumption of information isn&#39;t enough, there is immense value in creating content, exposing it to a wide audience to …"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="http://localhost:8000/hello-world-this-is-the-first-article.html"/>
+  <meta property="og:url" content="http://localhost:8000/start-your-blog-101.html"/>
   <meta property="og:type" content="article"/>
-  <meta property="article:published_time" content="2020-05-30 09:50:00+07:00"/>
+  <meta property="article:published_time" content="2023-10-22 00:00:00+07:00"/>
   <meta property="article:modified_time" content=""/>
   <meta property="article:author" content="http://localhost:8000/author/yassine-belmamoun.html">
-  <meta property="article:section" content="misc"/>
+  <meta property="article:section" content="Tutorial"/>
   <meta property="og:image" content="http://localhost:8000/images/profile_picture_002.jpg">
 
-  <title>Yassine Belmamoun - Personal Website &ndash; Hello World! This is the first article!</title>
+  <title>Yassine Belmamoun - Personal Website &ndash; Blogging made simple</title>
 
 
 </head>
@@ -161,18 +161,55 @@ rel="me"           href="mailto:belmamoun.yassine@gmail.com"
 <article class="single">
   <header>
       
-    <h1 id="hello-world-this-is-the-first-article">Hello World! This is the first article!</h1>
+    <h1 id="start-your-blog-101">Blogging made simple</h1>
     <p>
-      Posted on May 30, 2020 in <a href="http://localhost:8000/category/misc.html">misc</a>
+      Posted on October 22, 2023 in <a href="http://localhost:8000/category/tutorial.html">Tutorial</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>Hello World!</p>
-<p>I finally decided to make a blog to share thoughts and notes. Anyway, here's the first post out of many to come.</p>
-<p>I will add a newsletter later.</p>
+    <p>Every week, I invest a substantial amount of time reading, exploring podcasts and watching videos, all in the pursuit of knowledge. However, I've uncovered a missing piece in this quest: passive consumption of information isn't enough, there is immense value in creating content, exposing it to a wide audience to assist others and learn back from them.</p>
+<p>That's when I realized that I need to adjust the balance between the amount of content I passively consume and the amount of content that I actively produce. To get things rolling, I wanted to make things super easy for myself to publish articles on this blog. This post is all about sharing my current setup and explaining why and how I set it up this way.</p>
+<h2>Choice of a solution</h2>
+<p>I had the following requirements:</p>
+<ul>
+<li>I needed easy customization for my blog's format and design.</li>
+<li>The content I publish had to be reader-friendly, including support for code syntax highlighting.</li>
+<li>I wanted to steer clear of third-party dependencies like hosted platforms (Medium, Blogger, etc.).</li>
+<li>Writing offline, even on a plane, had to be seamless.</li>
+<li>Budget-wise, I aimed for an economical approach, staying within the range of $20 per year.</li>
+<li>Learning a new technology was a no-go; simplicity was paramount.</li>
+<li>Markdown had to be my go-to format for content creation.</li>
+<li>Lastly, I wanted to avoid the complexities of handling intricate systems, like databases.</li>
+</ul>
+<p>I evaluated various solutions, which I categorized as follows:</p>
+<ul>
+<li>Managed Solutions (e.g. Medium, Blogger, Squarespace, etc.)</li>
+<li>Self Hosted Solutions<ul>
+<li>Dynamic Website Generator (e.g. Wordpress)</li>
+<li>Static Website Generator (e.g. Jekyll, Hugo, Pelican)</li>
+</ul>
+</li>
+</ul>
+<p>Managed solutions were quickly ruled out due to limitations like domain name usage restrictions, cost, and intrusive advertisements, among other issues. My focus shifted to self-hosted alternatives.</p>
+<p>I dismissed options like WordPress for being overly complex (e.g. databases), and honed in on lightweight solutions like static website generators—specifically Jekyll, Hugo, and Pelican.</p>
+<p>Ultimately, I chose Pelican because it's built with Python, a language I'm comfortable with.</p>
+<h2>How it works</h2>
+<p>Here is a brief of how easy it is to set up:</p>
+<ol>
+<li>Install the Pelican library locally</li>
+<li>Run a command to quick start your project</li>
+<li>(Optional) Configure your project (e.g. themes, etc.)</li>
+<li>Write articles (and pages) in Markdown</li>
+<li>Run a command to publish your articles</li>
+</ol>
+<p>Producing content is straightforward: all you need is a text editor supporting Markdown. Then, you can track all changes with git history, publish your article with a simple <code>git push</code> and host your entire blog on Github Pages.</p>
+<p>This setup offers a portable self-hosted blog that's fully customizable. You can write offline, and the best part? It's entirely cost-free (e.g. the only cost would be for acquiring a domain name ~ 10$ per year).</p>
+<h2>Tutorial</h2>
+<p>If you'd like to do the same, the only requirement is a very basic understanding of Python.</p>
+<p>I wrote a more detailed tutorial on <a href="http://localhost:8000/drafts/pelican-tutorial.html">how to get started with Pelican</a>.</p>
   </div>
   <div class="tag-cloud">
     <p>
